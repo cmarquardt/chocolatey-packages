@@ -12,7 +12,7 @@
 Windows X-server based on the xorg git sources (like xming or cygwin's xwin), but compiled with Visual C++ 2012 Express Edition. Source code can also be compiled with VS2008, VS2008 Express Edition and VS2010 Express Edition, although current project and makefile are not fully compatible anymore.
     </description>
     <projectUrl>http://sourceforge.net/projects/vcxsrv/</projectUrl>
-    <packageSourceUrl>https://github.com/cmarquardt/chocolatey-package/tree/master/VcXsrv</packageSourceUrl>
+    <packageSourceUrl>https://github.com/cmarquardt/chocolatey-packages/tree/master/automatic/vcxsrv-eum</packageSourceUrl>
     <projectSourceUrl>http://sourceforge.net/p/vcxsrv/code/ci/master/tree/</projectSourceUrl>
     <bugTrackerUrl>http://sourceforge.net/p/vcxsrv/bugs/</bugTrackerUrl>
     <tags>vcxsrv admin X11 XServer</tags>
