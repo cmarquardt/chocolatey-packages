@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hostsfileeditor</id>
+    <version>1.2.0</version>
+    <packageSourceUrl>https://github.com/cmarquardt/chocolatey-packages/tree/master/automatic/hostsfileeditor</packageSourceUrl>
+    <owners>marq</owners>
+    <title>HostsFileEditor (Install)</title>
+    <authors>scottlerch</authors>
+    <projectUrl>https://scottlerch.github.io/HostsFileEditor/</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/hostsfileeditor.png</iconUrl>-->
+    <copyright>2017 Scott M. Lerch</copyright>
+    <licenseUrl>https://github.com/scottlerch/HostsFileEditor/blob/master/License.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/scottlerch/HostsFileEditor</projectSourceUrl>
+    <docsUrl>https://scottlerch.github.io/HostsFileEditor/</docsUrl>
+    <bugTrackerUrl>https://github.com/scottlerch/HostsFileEditor/issues</bugTrackerUrl>
+    <tags>hostsfileeditor admin SPACE_SEPARATED</tags>
+    <summary>Easily edit and manage the hosts file for Windows.</summary>
+    <description>
+      Features
+      ========
+
+      Edit the hosts file:
+
+      - Cut, copy, paste, duplicate, enable, disable and move one or more entries at a time
+      - Filter and sort when there are a large number of host entries
+      - Enable and disable entire hostsfile from application or tray
+      - Archive and restore various hostsfile configurations when switching between environments
+      - Automatically ping endpoints to check availability
+
+      Usage Notes
+      ===========
+
+      By default the application closes to the tray. To exit completely you must select Exit
+      from the File menu or tray context menu. Only one instance of the application is allowed
+      at a time. If you try to open it again it will just activate the previously running
+      instance.
+
+      When selecting rows to move, delete, copy, or cut be sure to select the entire row using
+      the row header cell. If no entire rows are selected, cut, copy, paste, and delete apply
+      individually to the selected cells.
+
+      Using the filter and sort while editing is quirky. The filter and sort are applied once
+      a cell is edited so your cell may change positions or disappear depending on the current sort
+      and filter.
+    </description>
+    <releaseNotes>https://github.com/scottlerch/HostsFileEditor/releases/tag/v1.2.0</releaseNotes>
+    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
+         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
+         - You want to use Get-PackageParameters and on less than 0.11.0
+         - You want to take advantage of other functions in the core community maintainer's team extension package
+    -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
