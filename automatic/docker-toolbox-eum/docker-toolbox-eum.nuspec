@@ -25,12 +25,20 @@ Toolbox includes these Docker tools:
 * Oracle VirtualBox (deselected)
 
 ## Maintainers note:
-Docker Client for Windows and Docker Machine for Windows are 'fixed' components.
-Docker Compose for Windows is 'optional' but selected by me.
-VirtualBox and Kitematic for Windows (Alpha) are deselected by me.
+The Docker Client for Windows as well as Docker Machine for Windows are 'fixed'
+components. Docker Compose for Windows is 'optional' but already selected, as is
+Kitematic for Windows (Alpha). The installation of VirtualBox, however, were
+deselected as the version shipped with the Docker Toolbox installer tends to be
+outdated.
+
 You can override this by specifying `-ia /COMPONENTS="kitematic,virtualbox,dockercompose"`.
 
-Git for Windows should be optional but I could not deselect it.
+An existing installation of Git for Windows is used *if* it is installed in its
+default installation path (c:\Program Files\Git); this apparently cannot be overridden.
+
+By default, Desktop Icons will be installed, and the system-wide PATH will be
+updated to include the Docker Toolbox installation. An existing Docker VM will however
+not be upgraded automatically.
 
 The following tasks can be selected/deselected:
 
@@ -40,7 +48,9 @@ modifypath  = Add docker binaries to PATH
 upgradevm   = Upgrade Boot2Docker VM
 ```
 
-You can specify this with `-ia /TASKS="desktopicon,modifypath,upgradevm"`.
+by using `-ia /TASKS="desktopicon,modifypath,upgradevm"`. Note, however, the the
+PATH modification is done by chocolatey, not the Docker Toolbox installer (it has
+a bug in the PATH setting), so that the `modifypath` task will have no impact.
     </description>
   </metadata>
   <files>
