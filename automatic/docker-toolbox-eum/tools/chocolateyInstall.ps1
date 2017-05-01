@@ -1,20 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName= 'docker-toolbox-eum'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://download.docker.com/win/stable/DockerToolbox.exe'
+$toolsDir    =
 
 # Install Docker-Toolbox
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  url           = $url
+  packageName   = "docker-toolbox-eum"
+  unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+  fileType      = "exe"
+  url           = 'https://github.com/docker/toolbox/releases/download/v17.04.0-ce/DockerToolbox-17.04.0-ce.exe'
 
-  softwareName  = 'docker-toolbox*'
+  softwareName  = "docker-toolbox*"
 
-  checksum      = '9157ED0DB9CAC984FBD5F308B7CF92F27C449185EFA42E64EAAF3C7A747F5144'
+  checksum      = '9157ed0db9cac984fbd5f308b7cf92f27c449185efa42e64eaaf3c7a747f5144'
   checksumType  = 'sha256'
 
   silentArgs    = "/COMPONENTS=`"Docker,DockerMachine,DockerCompose,Kitematic`" /TASKS=`"desktopicon`" /silent /norestart /log=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).log`""

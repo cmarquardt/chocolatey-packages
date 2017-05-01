@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -52,6 +52,7 @@ by using `-ia /TASKS="desktopicon,modifypath,upgradevm"`. Note, however, the the
 PATH modification is done by chocolatey, not the Docker Toolbox installer (it has
 a bug in the PATH setting), so that the `modifypath` task will have no impact.
     </description>
+    <releaseNotes>https://github.com/docker/toolbox/releases/tag/17.04.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
