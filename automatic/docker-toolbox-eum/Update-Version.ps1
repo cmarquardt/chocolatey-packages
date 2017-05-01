@@ -9,7 +9,7 @@ if (!([System.Diagnostics.FileVersionInfo]::GetVersionInfo($installer).ProductVe
 $version = $Matches[0]
 
 Write-Output "Version from installer: $version"
-$spec = "docker-toolbox.nuspec"
+$spec = "docker-toolbox-eum.nuspec"
 (gc -Path $spec -Encoding UTF8) -replace "<version>.*</version>", "<version>$version</version>" | Out-File $spec -Encoding utf8
 
 $checksum = & checksum -f $installer -t sha256
