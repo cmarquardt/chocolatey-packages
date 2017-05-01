@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'docker-toolbox-eum'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -14,7 +14,7 @@ $packageArgs = @{
 
   softwareName  = 'docker-toolbox*'
 
-  checksum      = 'A7622B93BA4543EA7DF7B0CC8336A60588CB799E48463A68B9F66AA36509CD34'
+  checksum      = '9157ED0DB9CAC984FBD5F308B7CF92F27C449185EFA42E64EAAF3C7A747F5144'
   checksumType  = 'sha256'
 
   silentArgs    = "/TASKS=`"desktopicon`" /silent /norestart /log=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).log`""
