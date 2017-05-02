@@ -1,22 +1,24 @@
-# Definitions
+﻿# Definitions
 # -----------
 
-$packageName = 'VcXsrv (EUM)'
-$installerType = 'exe'
-$silentArgs = '/S'
-$version = '1.19.2.0'
-$url = "https://sourceforge.net/projects/vcxsrv/files/vcxsrv/${version}/vcxsrv.${version}.installer.exe/download"
-$url64 = "https://sourceforge.net/projects/vcxsrv/files/vcxsrv/${version}/vcxsrv-64.${version}.installer.exe/download"
-$checksum = '714478b04b6ab38377eb40af50f17e1a0769f906a972a0175b2e1ec515a4ea8e22ac90bcbbc3d555067152816c2cbe451611a5b6cb41d8e963c5fc01b7b01ee9'
-$checksum64 = 'eabcd619e89dedb1983e3c554de547fe6e98dfb33a2cba4fc657d042a8b1763a5c33a7c1e08ac807385cf815ac62ef72db0b15e0619eb49e5d22f074d12064a8'
-$checksumType = 'SHA512'
+$packageArgs = @{
+  packageName            = 'VcXsrv (EUM)'
+  fileType               = 'exe'
+  url                    = 'https://sourceforge.net/projects/vcxsrv/files/vcxsrv/1.19.2.0/vcxsrv.1.19.2.0.installer.exe'
+  url64                  = 'https://sourceforge.net/projects/vcxsrv/files/vcxsrv/1.19.2.0/vcxsrv-64.1.19.2.0.installer.exe'
+  checksum               = 'e53846ca1fb3c67a274cfe122f23ea9e7c1bf5d2fa0665bf57200b02376a8b60'
+  checksum64             = '8a4eb5ebcda927c8c9693b7fbec554bffbc5999af7254fc45d027e41f914f464'
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/S'
+  validExitCodes         = @(0)
+  softwareName           = 'maxima*'
+}
 
 # Installer
 # ---------
 
-Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64 `
-  -Checksum $checksum -Checksum64 $checksum64 `
-  -ChecksumType $checksumType
+Install-ChocolateyPackage @packageArgs
 
 # Desktop shortcuts
 # -----------------

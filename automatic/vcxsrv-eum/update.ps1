@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 # DL: https://sourceforge.net/projects/vcxsrv/files/latest/download?source=files
 
 function global:au_GetLatest {
-    #$download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases
     #$version = ($download_page.Links | ? InnerText -match 'Windows' | % InnerText) -replace '-Windows'
     #$version = $version | ? { [version]::TryParse($_, [ref]($__)) } | measure -Maximum | % Maximum
 
