@@ -1,7 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$toolsDir    =
-
 # Install Docker-Toolbox
 
 $packageArgs = @{

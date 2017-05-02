@@ -1,5 +1,4 @@
 import-module au
-#. $PSScriptRoot\..\_scripts\all.ps1
 
 $releases = 'https://github.com/docker/toolbox/releases/latest'
 
