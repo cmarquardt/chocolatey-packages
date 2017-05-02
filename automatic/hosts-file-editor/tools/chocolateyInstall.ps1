@@ -1,14 +1,12 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop';
 
-$packageName= 'HostsFileEditor'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/scottlerch/HostsFileEditor/releases/download/v1.2.0/HostsFileEditorSetup-1.2.0.msi'
+# Install Hosts File Editor
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
+  packageName   = "hosts-file-editor"
+  unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'MSI'
-  url           = $url
+  url           = 'https://github.com/scottlerch/HostsFileEditor/releases/download/v1.0.0/HostsFileEditorSetup-1.0.0.msi'
   softwareName  = 'HostsFileEditor*'
   checksum      = '52DB892868E2094DE82690F2825E1CC08187B11E850463DAA33D9A829DA34753'
   checksumType  = 'sha256'
