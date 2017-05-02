@@ -27,7 +27,7 @@ function global:au_GetLatest() {
     @{
         URL64        = 'https://github.com' + $url
         Version      = $version
-        ReleaseNotes = 'https://github.com/scottlerch/HostsFileEditor/releases/tag/${version}'
+        ReleaseNotes = "https://github.com/scottlerch/HostsFileEditor/releases/tag/${version}"
     }
 }
 
