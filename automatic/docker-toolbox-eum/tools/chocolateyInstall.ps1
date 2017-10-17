@@ -6,11 +6,11 @@ $packageArgs = @{
   packageName   = "docker-toolbox-eum"
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = "exe"
-  url           = 'https://github.com/docker/toolbox/releases/download/v17.04.0-ce/DockerToolbox-17.04.0-ce.exe'
+  url           = 'https://github.com/docker/toolbox/releases/download/v17.06.2-ce/DockerToolbox-17.06.2-ce.exe'
 
   softwareName  = "docker-toolbox*"
 
-  checksum      = '9157ed0db9cac984fbd5f308b7cf92f27c449185efa42e64eaaf3c7a747f5144'
+  checksum      = 'adcfc705e123866de406f682b0b684fe35ea0a846a4d44233c9f4628d5a6eaf1'
   checksumType  = 'sha256'
 
   silentArgs    = "/COMPONENTS=`"Docker,DockerMachine,DockerCompose,Kitematic`" /TASKS=`"desktopicon`" /silent /norestart /log=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).log`""
