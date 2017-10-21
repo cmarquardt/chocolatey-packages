@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-toolbox-eum</id>
-    <version>17.06.2</version>
+    <version>17.10.0</version>
     <title>Docker Toolbox</title>
     <authors>Docker Inc.</authors>
     <projectUrl>https://docker.com</projectUrl>
@@ -52,7 +52,7 @@ by using `-ia /TASKS="desktopicon,modifypath,upgradevm"`. Note, however, the the
 PATH modification is done by chocolatey, not the Docker Toolbox installer (it has
 a bug in the PATH setting), so that the `modifypath` task will have no impact.
     </description>
-    <releaseNotes>https://github.com/docker/toolbox/releases/tag/17.06.2</releaseNotes>
+    <releaseNotes>https://github.com/docker/toolbox/releases/tag/17.10.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
